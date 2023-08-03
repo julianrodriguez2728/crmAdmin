@@ -1,0 +1,12 @@
+.divSearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:100px ;
+}
+
+.searchbar{
+    padding: 10px;
+    background-color: rgb(208, 208, 208);
+    border: solid 1px black;
+}

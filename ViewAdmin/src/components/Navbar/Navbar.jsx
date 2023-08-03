@@ -1,10 +1,9 @@
-import * as React from 'react';
+import React from 'react'
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
@@ -12,13 +11,12 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import HomeIcon from '@mui/icons-material/Home';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import './Navbar.css'
+import rad from '../../assets/radAmin.png'
+
 
 const drawerWidth = 240;
 
@@ -100,7 +98,7 @@ export default function MiniDrawer() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', color:'red'}}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -116,8 +114,9 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
+          <img className='rad' src={rad} alt="" />
           <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
+            Admin
           </Typography>
         </Toolbar>
       </AppBar>
@@ -128,17 +127,17 @@ export default function MiniDrawer() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:20, marginBottom:20}}>
+        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:40, marginBottom:40}}>
             <HomeIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
             <p style={{marginLeft: 50, marginRight:150}}>Home</p>
         </div>
         <Divider />
-        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:20, marginBottom:20}}>
+        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:40, marginBottom:40}}>
             <SupervisorAccountIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
             <p style={{marginLeft: 50, marginRight:150}}>Users</p>
         </div>
         <Divider />
-        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:20, marginBottom:20}}>
+        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:40, marginBottom:40}}>
             <ShoppingBagIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
             <p style={{marginLeft: 50, marginRight:150}}>Products</p>
         </div>
@@ -147,7 +146,6 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        **Aqui van los componentes
       </Box>
     </Box>
   );
