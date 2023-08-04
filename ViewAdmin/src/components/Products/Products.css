@@ -1,0 +1,15 @@
+.divProds{
+    display: flex;
+    border: solid 1px rgb(216, 215, 215);
+
+}
+
+.divStock{
+  width: 10%;
+  margin: auto;
+}
+
+.divName{
+    width: 30%;
+    margin: auto;
+}
