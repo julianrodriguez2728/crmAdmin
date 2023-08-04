@@ -4,6 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Divider } from '@mui/material';
 
 const UserDropdown = ({id, name, email, Products}) => {
   const [expanded, setExpanded] = React.useState(false);
@@ -11,6 +12,12 @@ const UserDropdown = ({id, name, email, Products}) => {
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
+
+// const currentDate = new Date();
+
+// const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+
+// console.log(currentDate.toLocaleDateString('de-DE', options));
 
 
   const total = Products?.reduce((sum, prod) => sum + prod.price, 0);
@@ -50,18 +57,38 @@ const UserDropdown = ({id, name, email, Products}) => {
           <Typography>
             {
             Products?.map((prod) => {
+
+              const newDate = new Date(prod.updatedAt)
+
+              const formatedDate = newDate.toLocaleString("es-ES", {
+                day: "2-digit",
+                month: "2-digit",
+                year: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+              });
+
                 return(
+                  <div>
+                    
                         <div>
-                            <p>-{prod.name}</p>
-                            <p>Price: {prod.price}</p>
+                            <p style={{display: 'flex', justifyContent: 'center', padding: 15}}>-{prod.name}</p>
+                            <div style={{display: 'flex', justifyContent:'space-between'}}>
+
+                            <p>Date: {formatedDate} </p>
+                            <p>Price: {prod.price} </p>
+                            </div>
                         </div>
                         
-                    
+                    <Divider />
+                  </div>
+
                 )
             })
             
             }
-            <p>Total: {total}</p> 
+            <p style={{display: 'flex', justifyContent: 'flex-end', marginTop: 15}}>Total: {total}</p> 
           </Typography>
         </AccordionDetails>
       </Accordion>
