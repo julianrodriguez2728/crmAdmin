@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllUsers } from '../../redux/UsersActions';
+import UserDropdown from './UserDropdown'
+
 
 const Users = () => {
 
@@ -18,10 +20,13 @@ const Users = () => {
             {
                 users.users?.map(user => {
                     return (
-                        <div>
-                            <h1 style={{color: 'red'}}>{user.email}</h1>
-
-                        </div>
+                        <UserDropdown 
+                            key={user.id}
+                            id={user.id}
+                            name={user.name}
+                            email={user.email}
+                            Products={user.Products}
+                        />
                     )
                 })
             }
