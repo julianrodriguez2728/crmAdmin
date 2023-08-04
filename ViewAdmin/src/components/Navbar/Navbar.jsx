@@ -129,23 +129,23 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:40, marginBottom:40}}>
-            <Link to='/'>
+            <Link style={{display:'flex', alignItems:'center', textDecoration:'none', color:'black'}} to='/'>
               <HomeIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
-              <p style={{marginLeft: 50, marginRight:150}}>Home</p>
+              <p style={{ marginRight:150, marginLeft: 50}}>Home</p>
             </Link>
         </div>
         <Divider />
         <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:40, marginBottom:40}}>
-            <Link to='/'>
+            <Link style={{display:'flex', alignItems:'center', textDecoration:'none', color:'black'}} to='/'>
               <SupervisorAccountIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
-              <p style={{marginLeft: 50, marginRight:150}}>Users</p>
+              <p style={{ marginRight:150, marginLeft: 50}}>Users</p>
             </Link>
         </div>
         <Divider />
         <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:40, marginBottom:40}}>
-            <Link to='/products'>
+            <Link style={{display:'flex', alignItems:'center', textDecoration:'none', color:'black'}} to='/products'>
               <ShoppingBagIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
-              <p style={{marginLeft: 50, marginRight:150}}>Products</p>
+              <p style={{ marginRight:150, marginLeft: 50}}>Products</p>
             </Link>
         </div>
 
