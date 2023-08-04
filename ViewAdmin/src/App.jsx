@@ -1,9 +1,9 @@
 
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
-/* import Table from './components/Table/Table' */
-import Users from './components/Users/Users'
-import Searchbar from './components/Searchbar/Searchbar'
+import Home from './components/Home/Home'
+import { Routes, Route } from 'react-router-dom'
+import Products from './components/Products/Products'
 
 
 function App() {
@@ -11,9 +11,10 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <Searchbar/>
-      {/* <Table/> */}
-      <Users/>
+       <Routes>
+       <Route path="/" element={<Home/>}/>
+       <Route path="/products" element={<Products/>}/>
+       </Routes>
     </div>
   )
 }

@@ -16,6 +16,7 @@ import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import './Navbar.css'
 import rad from '../../assets/radAmin.png'
+import { Link } from 'react-router-dom';
 
 
 const drawerWidth = 240;
@@ -128,18 +129,24 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:40, marginBottom:40}}>
-            <HomeIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
-            <p style={{marginLeft: 50, marginRight:150}}>Home</p>
+            <Link to='/'>
+              <HomeIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
+              <p style={{marginLeft: 50, marginRight:150}}>Home</p>
+            </Link>
         </div>
         <Divider />
         <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:40, marginBottom:40}}>
-            <SupervisorAccountIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
-            <p style={{marginLeft: 50, marginRight:150}}>Users</p>
+            <Link to='/'>
+              <SupervisorAccountIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
+              <p style={{marginLeft: 50, marginRight:150}}>Users</p>
+            </Link>
         </div>
         <Divider />
         <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginTop:40, marginBottom:40}}>
-            <ShoppingBagIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
-            <p style={{marginLeft: 50, marginRight:150}}>Products</p>
+            <Link to='/products'>
+              <ShoppingBagIcon sx={{ fontSize: 40, marginLeft: 1.5}}/>
+              <p style={{marginLeft: 50, marginRight:150}}>Products</p>
+            </Link>
         </div>
 
         <Divider />
